@@ -10,7 +10,15 @@
 
 [autonn](https://github.com/vlfeat/autonn)
 
-
+```
+CRA-CNN
+├── CUB_Bird
+├── layers
+├── autonn-master
+├── matconvnet-1.0-beta25
+├── mcnExtraLayers-master
+├── mcnPyTorch-master
+```
 
 w/o PRE denotes the network pretrained on ImageNet.
 
