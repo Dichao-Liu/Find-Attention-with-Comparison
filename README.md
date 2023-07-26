@@ -1,8 +1,6 @@
-# CRA-CNN
+# Find ttention with Comparison
 
-Official MATLAB implementation of the Contrastively-reinforced Attention Convolutional Neural Network (CRA-CNN). CRA-CNN uses an additional network to reinforce the attention awareness of deep activations during the training procedure for the fine-grained image classification task. The additional network is removed at the inference phase to save computation costs. You may check more details in our [BMVC paper](https://www.bmvc2020-conference.com/assets/papers/0656.pdf) if you are interested in our work.
-
-![The overview of CRA-CNN.](https://github.com/Dichao-Liu/CRA-CNN/blob/main/CRA-CNN.png)
+The proposed framework is inspired by human behaviors: (1) humans always use what they learn from one task to help learn another related task; (2) humans instinctively compare images of the same/different categories and try to find the commonalities/differences between them. The proposed framework is designed to simulate these human behaviors. Extensive experimental results show that the proposed framework can notably improve the recognition accuracy of fine-grained image recognition with various backbone network architectures and on various public datasets.
 
 ## Requirements
 
@@ -31,14 +29,4 @@ Unzip the files `bird-res50-biAtt.zip` and `bird-res50-biAtt-PRE.zip`, and you c
 
 **To reproduce the best accuracy** reported in the BMVC paper at the inference phase, please **only resize** and **do not crop** the input images. Then for each input image, you will obtain a tensor whose size is *`h`×`w`×`num_of_classes`* (*`h`* and *`w`* vary between different specific images) at the last fully-connected layer (i.e., the classifier). The **final prediction score** for the input image is computed by averaging the *`h`×`w`×`num_of_classes`* tensor into *`1`×`1`×`num_of_classes`* prediction score.
 
-### Citation
- 
-Please cite our paper if you use CRA-CNN in your work.
-```
-@inproceedings{liu2020contrastively,
-  title={Contrastively-reinforced Attention Convolutional Neural Network for Fine-grained Image Recognition.},
-  author={Liu, Dichao and Wang, Yu and Kato, Jien and Mase, Kenji},
-  booktitle={BMVC},
-  year={2020}
-}
-```
+
